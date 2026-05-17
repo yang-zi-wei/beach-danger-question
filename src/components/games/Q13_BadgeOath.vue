@@ -163,12 +163,13 @@ function onMedalError() {
 
 // === 状态 ===
 const used = reactive({ A: false, B: false, C: false, D: false });
-const filledSlots = ref([null, null, null]); // 每个槽放的是 badge 对象
+const filledSlots = ref([null, null, null]); // 每个槽位最终落位的 badge 对象
+const reservedSlots = ref([false, false, false]); // 预占标记：避免连点时多徽章争同一槽
 const flying = ref([]);
 const correctKeys = computed(() => new Set(props.question?.correct || []));
 
 const remainingSlots = computed(() =>
-  filledSlots.value.filter((s) => !s).length
+  reservedSlots.value.filter((r) => !r).length
 );
 const filledCount = computed(() =>
   filledSlots.value.filter((s) => s).length
@@ -217,12 +218,13 @@ function onPickBadge(b) {
     return;
   }
 
-  // 正确徽章：飞向下一个空槽
-  const slotIdx = filledSlots.value.findIndex((s) => !s);
+  // 正确徽章：飞向下一个未预占的槽
+  const slotIdx = reservedSlots.value.findIndex((r) => !r);
   if (slotIdx < 0) return;
   const slot = slots.value[slotIdx];
 
   used[b.key] = true;
+  reservedSlots.value[slotIdx] = true; // 立即预占，防止连点时多枚徽章争同一槽位
   // 起飞：从托盘飞向勋章中央槽位
   // 托盘按钮在屏幕底部固定区域，徽章卡的中心位置每个 key 不同。
   // 简化：每个徽章都从屏幕底部居中位置升起到勋章槽位（视觉一致即可）。

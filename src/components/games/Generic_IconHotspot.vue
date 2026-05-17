@@ -1,5 +1,13 @@
 <template>
   <div ref="stageRef" class="ih-stage">
+    <!-- 模糊背景：用同张场景图填满 stage 的空白区域 -->
+    <img
+      v-if="started"
+      class="ih-scene-bg"
+      :src="resolvedScene"
+      aria-hidden="true"
+    />
+
     <!-- 题目说明 -->
     <h2 v-if="started" class="ih-prompt">{{ question?.title }}</h2>
 
@@ -157,6 +165,20 @@ function showWrong(key) {
   overflow: hidden;
   background: #2d1810;
   touch-action: manipulation;
+}
+
+/* 模糊背景：填满 stage 在主图四周的空白区域 */
+.ih-scene-bg {
+  position: absolute;
+  inset: -24px;
+  width: calc(100% + 48px);
+  height: calc(100% + 48px);
+  object-fit: cover;
+  filter: blur(24px) brightness(0.55) saturate(0.9);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .ih-prompt {
