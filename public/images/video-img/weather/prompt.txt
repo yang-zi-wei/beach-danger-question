@@ -1,0 +1,15 @@
+【章节】第五章·天气征兆类（Q09-Q10）
+
+【主题】"朝霞不出门"——从粉橙朝霞到乌云压顶的变天延时
+
+【输入图】cover.png：清晨海平线上一片粉橙色朝霞，哪吒和爷爷站在悬崖上眺望，海面平静如镜。
+
+【海螺 AI 图生视频提示词（中文）】
+镜头从远处海平线缓缓推向人物。前 1.5 秒：粉橙色朝霞铺满天空，云朵被染成棉花糖色，海面金光粼粼，海鸥低飞，哪吒指着朝霞和爷爷讨论。第 2 秒后开始延时变化——天空从粉橙逐渐转为橙红、再转灰紫，云层加厚下压，太阳被云挡住光线减弱，海面颜色由金转为铅灰，浪头开始变高翻起白沫。第 4 秒：天色彻底变暗，乌云堆叠，远处地平线闪过一道蓝白闪电并伴随沉闷雷声，海面涌起明显的白色泡沫带（赤潮般的警示线）。爷爷一把拉住哪吒的手往岸边跑，衣摆被骤起的海风吹乱。最后定格在两人逃离海边、乌云压顶的紧张画面。
+
+【English motion prompt (备用)】
+Camera slowly dollies from the distant horizon toward the characters. First 1.5s: pink-orange dawn fills the sky, cotton-candy clouds, golden shimmer on calm sea, low-flying gulls, Nezha points and chats with grandpa. After 2s, time-lapse weather change — sky shifts from pink-orange to red, then grey-purple; clouds thicken and lower; sunlight dims; sea turns from gold to lead-grey; waves grow whitecaps. At 4s: sky goes dark, thunder clouds stack, a blue-white lightning fork flashes on the horizon with a low rumble, a stark white foam band slithers across the sea surface as warning. Grandpa grabs Nezha's hand and pulls him toward shore, robes whipping in sudden wind. Final freeze on the two fleeing under the storm.
+
+【风格关键词】戏曲风插画、电影感延时摄影、由暖入冷调色、天气剧变张力、戏曲打击乐渐强
+【时长建议】5-6 秒
+【分辨率】1024x1024 或 1:1

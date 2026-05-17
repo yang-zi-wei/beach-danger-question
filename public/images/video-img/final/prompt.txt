@@ -1,0 +1,21 @@
+【章节】终章·终极忠告（Q11-Q13）
+
+【主题】"安全小卫士的三件守护使命"——以 Q13 为核心，把 A/B/C 三个正确行动具象化，D 错误行动作为被划掉的反面镜头
+
+【对应题目（Q13）】成为"安全小卫士"需要：
+- A 把知识教给弟弟妹妹（正解）
+- B 发现危险区域插警示牌（正解）
+- C 每周检查家里救生装备（正解）
+- D 台风天直播冲浪（危险，被禁止）
+
+【输入图】cover.png：哪吒胸披"安全小卫士"红绶带站在金色夕阳下的悬崖中央，四周环绕三件守护使命——左下方教弟弟妹妹安全知识、右侧悬崖边插着写"危"字的警示牌、脚下打开的木箱里整齐摆放救生衣/绳索/救生圈/哨子/急救包并附带打勾清单；左上角一块裂开的小屏幕显示有人在台风浪里冲浪，被红色圆圈斜杠"禁止符"覆盖。哪吒身后立着金光闪烁的"海岛守护"石碑，妈祖、敖丙作为半透明守护灵立于身后两侧。
+
+【海螺 AI 图生视频提示词（中文）】
+镜头从哪吒胸前的"安全小卫士"红绶带特写开始，缓慢拉远并轻微环绕。前 1.5 秒：哪吒回头微笑望向身侧坐着的弟弟妹妹，弟弟妹妹抬手鼓掌、面前的教学木板上出现一道淡淡的金色对勾（✓教知识）。第 2 秒：镜头平移到右侧，悬崖边木质警示牌被一只无形的手稳稳压进土里，旁边小旗在海风中轻轻飘动，牌面"危"字浮现金光对勾（✓插警示牌）。第 3 秒：镜头下摇到脚边的木箱，救生衣、绳索、救生圈、哨子、急救包依次被金光扫过，纸面清单出现三个连续的绿色对勾（✓查装备）。第 4 秒：镜头快速扫过左上角的小屏幕——台风冲浪画面被红色禁止符号狠狠盖上，屏幕"啪"地裂成几瓣并冒出火花后消散（✗错误行为）。第 5 秒：哪吒站定、抬头挺胸，身后"海岛守护"四个金字大放光芒，妈祖与敖丙的半透明轮廓清晰起来并向哪吒微微点头致敬，一道金色光柱从石碑直射云霄。最后定格在三人并肩、金光冲天、红绶带飘扬的加冕瞬间。
+
+【English motion prompt (备用)】
+Camera starts on a close-up of Nezha's red "安全小卫士" sash and slowly pulls back with a gentle orbit. 1.5s: Nezha turns and smiles at the small sibling beside him who claps; a gold check mark appears on the teaching board (✓ teach). 2s: camera pans to the right cliff edge — an invisible hand presses the wooden warning sign firmly into the ground, small flag fluttering, gold check mark blooms over the "危" character (✓ sign). 3s: camera tilts down to the rescue chest — golden light sweeps over life vest, rope, ring, whistle, first-aid kit in order; three green checks appear on the paper checklist (✓ gear). 4s: camera flicks to the upper-left phone screen — the typhoon-surfing image is slammed with a red prohibition symbol, the screen cracks into pieces and sparks out (✗ forbidden). 5s: Nezha stands tall, the "海岛守护" stone tablet glows brightly behind him, ghostly Mazu and Aobing materialize and nod in salute, a golden beam shoots from the tablet to the sky. Final freeze on the three guardians side by side under blazing gold light, red sash fluttering.
+
+【风格关键词】戏曲风插画、电影感拉远环绕、金光对勾特效、教育对比叙事（✓三正 / ✗一错）、仪式加冕氛围、戏曲钟磬庄重
+【时长建议】6 秒
+【分辨率】1024x1024 或 1:1

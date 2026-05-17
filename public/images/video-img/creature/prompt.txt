@@ -1,0 +1,15 @@
+【章节】第二章·海洋生物类（Q03-Q04）
+
+【主题】"美丽下的毒刺"——清澈潮池里慢慢浮现出有毒水母和狮子鱼
+
+【输入图】cover.png：哪吒趴在礁石潮池边，阳光透过清水照出珊瑚和小鱼，他眼中满是好奇。
+
+【海螺 AI 图生视频提示词（中文）】
+镜头缓慢向潮池水面推近，水波轻轻荡漾，珊瑚摇曳，小鱼游动。约 2 秒后水中开始变化——一只半透明月亮水母从画面上方缓缓飘下，长长的触须像丝带一样在哪吒伸出的手边轻轻起伏，距离指尖只剩几厘米。几乎同时，珊瑚缝隙里慢慢探出一条狮子鱼，它鲜艳的扇形毒鳍在水中徐徐展开，颜色越显越亮像在示警。哪吒的笑容凝固，眼睛慢慢瞪大，手却还没来得及缩回。最后定格在他意识到危险却不敢动的瞬间。
+
+【English motion prompt (备用)】
+Camera slowly pushes in toward the tide pool surface; water ripples, coral sways, small fish drift. After ~2s, a translucent moon jellyfish drifts down from above with long ribbon-like stinging tentacles undulating just centimeters from Nezha's outstretched fingertips. Simultaneously, a lionfish slowly emerges from a coral crevice, its colorful fan-shaped venomous fins unfolding and glowing brighter like a warning. Nezha's smile freezes, eyes widen, hand still extended. Final freeze on the moment he realizes the danger but dares not move.
+
+【风格关键词】戏曲风插画、电影感水下慢推、宁静转危机、柔和光影、戏剧悬念
+【时长建议】4-5 秒
+【分辨率】1024x1024 或 1:1
