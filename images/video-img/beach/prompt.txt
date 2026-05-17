@@ -1,0 +1,19 @@
+【章节】第四章·沙滩游戏类危险闯关（Q07-Q08）
+
+【主题】"欢乐表象下的两处危险"——沙坑挖得过深 + 泳圈漂入深水区
+
+【对应题目】
+- Q07 挖沙坑要注意：A 坑深不超过膝盖（正解）/ B 比赛挖深（危险）/ C 贝壳装饰
+- Q08 火烈鸟泳圈适合用在：A 码头深水区（危险）/ B 浪小浅水区且有大人看护（正解）/ C 台风天巨浪
+
+【输入图】cover.png：阳光下的沙滩看似欢乐——左侧哪吒陷在过深沙坑里只露出胸部以上、坑壁松沙下落即将塌方；右侧伙伴抱着粉色火烈鸟泳圈漂到了码头附近的深蓝水域；中间妈祖从沙滩垫上半跪起身、伸手急切呼喊。整张画面笼罩着橙黄色警示色调。
+
+【海螺 AI 图生视频提示词（中文）】
+镜头从画面中心缓慢拉远再略微抬升，将左侧深沙坑和右侧深水区两处危险同时收入画面。前 2 秒：橙黄警示色调下，左侧沙坑壁不断塌落，沙粒沙沙下滑，哪吒拼命想抓住坑沿；右侧泳圈在涌动的深蓝海面上轻轻摇摆越漂越远，伙伴慌乱挥手呼救；中间妈祖从沙滩垫上猛地起身向两边伸手呼喊，海风吹起她的衣袂。第 3 秒后画面笼罩在紧张的暖橙色警示光下，远处仿佛传来海浪低鸣。最后定格在妈祖伸手呼喊、左右两边小孩同时陷入危险的揪心瞬间，画面顶部浮现一行戏曲风警示文字"危险！"作为开场点题。
+
+【English motion prompt (备用)】
+Camera slowly pulls back and slightly tilts up from the center, framing both the deep sand pit (left) and the deep-water flamingo ring (right) in one shot. First 2s: under amber warning light, sand grains crumble down the steep pit walls, Nezha clings to the rim; on the right the flamingo ring drifts farther into the dark blue water with the kid waving for help; in the middle Mazu jumps up from the beach mat, arms outstretched calling out, robe fluttering in the wind. After 3s the whole frame deepens into tense orange warning light, distant ocean roar. Final freeze on Mazu reaching out while both children are caught in danger — perfect setup for the upcoming quiz challenge.
+
+【风格关键词】戏曲风插画、电影感拉远抬升、警示橙黄光、紧张悬念、教育对比开场、戏曲鼓点紧迫
+【时长建议】4-5 秒
+【分辨率】1024x1024 或 1:1

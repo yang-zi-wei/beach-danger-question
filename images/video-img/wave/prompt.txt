@@ -1,0 +1,15 @@
+【章节】第一章·海浪陷阱类（Q01-Q02）
+
+【主题】"海水欺骗"——平静沙滩上海面突然异常退去，露出海啸前兆
+
+【输入图】cover.png：哪吒蹲在礁石上开心捡海螺，海水正常潮位，阳光明媚，远处地平线干净。
+
+【海螺 AI 图生视频提示词（中文）】
+镜头从平视轻轻向左横移并微微推近哪吒。海面以不自然的速度向远处快速退去，发出低沉的隆隆声，礁石间慢慢露出更多湿沙、缠绕的海带和零落乱跳的小鱼。哪吒手中正捡海螺的动作慢慢停下，笑容一点点褪去。镜头随之略微仰起，远处地平线上浮现出一道又长又低的黑色水墙正缓缓逼近，天空被染上一抹橙色警示色，海鸥惊飞。哪吒猛然站起、瞪大眼睛，手中的小竹篮"啪"地掉在地上，最后定格在他惊恐回望海啸的瞬间。
+
+【English motion prompt (备用)】
+Camera slowly dollies in and gently pans left toward Nezha. The sea unnaturally retreats fast into the distance with a low rumble, exposing wet sand, tangled kelp, and flopping fish. Nezha's smile fades, hands freeze. Camera tilts up to reveal a long low dark tsunami wall on the horizon slowly approaching, sky tints orange-warning, seabirds flee. Nezha jumps up wide-eyed, drops his bamboo bucket. Final freeze on his terrified backward glance.
+
+【风格关键词】戏曲风插画、电影感、低角度横移、紧张氛围、戏曲鼓点伴奏
+【时长建议】4-5 秒
+【分辨率】1024x1024 或 1:1

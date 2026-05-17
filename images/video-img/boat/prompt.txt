@@ -1,0 +1,15 @@
+【章节】第三章·渔船活动类（Q05-Q06）
+
+【主题】"上船前的安全准备"——穿戴救生衣、识别紧急信号
+
+【输入图】cover.png：码头上，哪吒兴奋地望着停泊的小渔船；爷爷微笑递过一件橙色救生衣。
+
+【海螺 AI 图生视频提示词（中文）】
+镜头从码头平视位置缓缓平移到船甲板。前 1.5 秒：哪吒从爷爷手里接过救生衣，认真地把双臂穿进去，爷爷蹲下来一颗一颗帮他扣紧前胸的所有卡扣，每扣一颗就发出清脆的"咔哒"声。镜头平稳跟随哪吒的脚步从木栈桥跨上船甲板。第 3 秒后：哪吒从甲板上拿起一只大海螺号，深吸一口气贴到嘴边；爷爷站到船尾掌舵位伸手扶着舵轮温暖地点头微笑。船缆解开，船身缓缓离开码头，金色夕阳铺满海面，留下一道柔软的航迹。最后定格在哪吒鼓起腮帮子吹响螺号的瞬间。
+
+【English motion prompt (备用)】
+Camera slowly pans from the dock onto the boat deck. First 1.5s: Nezha takes the orange life vest from grandpa, threads his arms through; grandpa kneels and fastens each chest buckle one by one with crisp "click" sounds. Camera follows Nezha as he steps from the wooden pier onto the boat deck. After 3s: Nezha picks up a large conch horn from the deck, deep breath, brings it to his lips; grandpa moves to the helm, hands on the wheel, warm nod and smile. Mooring line releases, boat gently casts off, golden sunset bathes the sea, soft wake trails behind. Final freeze on Nezha sounding the conch horn with puffed cheeks.
+
+【风格关键词】戏曲风插画、电影感跟随镜头、温暖夕阳金光、仪式感、师徒传承
+【时长建议】5-6 秒
+【分辨率】1024x1024 或 1:1
