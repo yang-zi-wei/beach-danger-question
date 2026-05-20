@@ -2,14 +2,48 @@
 
 【主题】"朝霞不出门"——从粉橙朝霞到乌云压顶的变天延时
 
-【输入图】cover.png：清晨海平线上一片粉橙色朝霞，哪吒和爷爷站在悬崖上眺望，海面平静如镜。
+【输入图】cover.png：清晨海平线上一片粉橙色朝霞，哪吒和爷爷站在画面左侧的悬崖上，海面位于画面右侧延伸到地平线。
+
+【音频/配音约束（必须严格执行）】
+- 全片配音语言：**简体中文普通话**（Mandarin Chinese / Simplified Chinese voice-over）。
+- **严禁出现任何英语对白、英语旁白、英语字幕、英语歌词或英语口音**。
+- 角色对白必须使用下方提供的中文台词原文，**不得翻译为英文**，不得用英语朗读。
+- 旁白（如有）使用普通话；环境音（雷声、海浪、海风）保留自然音效，但不要叠加任何英文广播声、英文新闻播报声。
+- 字幕：如果模型自动生成字幕，仅允许中文字幕；不要出现拼音、英文翻译行。
+- 配音风格：哪吒——童声、清脆活泼；爷爷——年长男声、沉稳厚重、带一点关切担忧的语气。
+- 音乐：戏曲风打击乐（京剧锣鼓点）逐渐紧凑，无英文歌词。
+
+【角色台词（中文，必须用此原文配音，不许改写或翻译为英文）】
+- 第 1 秒（朝霞下闲谈）哪吒（指着朝霞）：「爷爷你看，今天的朝霞好红啊！」
+- 第 2 秒 爷爷（眉头微皱）：「红云压海……怕是要变天咯。」
+- 第 4 秒（乌云压顶）爷爷（大声）：「哪吒，快走！」
+- 第 5 秒（奔跑中）哪吒（喘气回头）：「爷爷，海要发怒啦！」
+
+【方向约束（最重要，请严格遵守）】
+- 海面始终位于画面右侧；陆地/内陆方向位于画面左侧。
+- 人物全程**背对海浪、面向画面左侧（内陆方向）**。
+- 当人物开始奔跑时，**奔跑方向必须从画面右侧向左侧、朝镜头外的内陆/高地方向**逃离。
+- 严禁出现以下错误：人物面朝大海跑、人物朝画面右侧（海的方向）跑、人物朝海平线方向跑。
+- 头部动作：奔跑时可有"回头瞥一眼身后压顶的乌云和巨浪"的紧张神态，但**身体和脚步必须朝向内陆（画面左侧）**。
+- 风向提示：海风从海面（右侧）吹向陆地（左侧），人物的衣摆、头发、爷爷的胡须**向画面左方飘**——这与逃跑方向一致，强化"远离海浪"的视觉语义。
 
 【海螺 AI 图生视频提示词（中文）】
-镜头从远处海平线缓缓推向人物。前 1.5 秒：粉橙色朝霞铺满天空，云朵被染成棉花糖色，海面金光粼粼，海鸥低飞，哪吒指着朝霞和爷爷讨论。第 2 秒后开始延时变化——天空从粉橙逐渐转为橙红、再转灰紫，云层加厚下压，太阳被云挡住光线减弱，海面颜色由金转为铅灰，浪头开始变高翻起白沫。第 4 秒：天色彻底变暗，乌云堆叠，远处地平线闪过一道蓝白闪电并伴随沉闷雷声，海面涌起明显的白色泡沫带（赤潮般的警示线）。爷爷一把拉住哪吒的手往岸边跑，衣摆被骤起的海风吹乱。最后定格在两人逃离海边、乌云压顶的紧张画面。
+（**全片中文普通话配音，禁止任何英文对白/旁白/字幕**）
+镜头从画面右侧远处海平线缓缓向左推、向画面左侧的人物靠近。前 1.5 秒：粉橙色朝霞铺满天空，云朵被染成棉花糖色，海面金光粼粼，海鸥低飞，哪吒和爷爷并肩立于画面左侧悬崖，面向画面外的左前方（内陆方向）轻松交谈，海在他们身后。哪吒用清脆童声中文说："爷爷你看，今天的朝霞好红啊！"
+第 2 秒后开始延时变化——天空从粉橙逐渐转为橙红、再转灰紫；云层加厚下压；阳光被云挡住、光线减弱；海面颜色由金转为铅灰；右侧海面浪头开始变高翻起白沫。爷爷沉稳的中年男声中文低声说："红云压海……怕是要变天咯。"
+第 4 秒：天色彻底变暗，乌云堆叠在画面右侧海面上空，远处地平线闪过一道蓝白闪电并伴随沉闷雷声；海面涌起明显的白色泡沫带；海风从右往左强劲吹拂，爷爷的白胡子、哪吒的红绸都向画面左方飘起。爷爷大声中文喊："哪吒，快走！"
+第 5 秒：**爷爷紧紧拉住哪吒的手，两人转身背对海浪，沿着悬崖小径朝画面左侧、远离海面的内陆方向奔跑**，身影从画面右侧向左侧移动并即将跑出左边界。哪吒边跑边回头瞥一眼身后翻涌的乌云和白浪，用喘气的中文童声喊："爷爷，海要发怒啦！"但脚步始终朝向画面左侧的陆地。最后定格在两人从画面左侧奔向安全高地、背后乌云压顶巨浪翻涌的紧张构图。配乐：戏曲风京剧锣鼓点由轻到重、节奏渐紧，全程**无英文歌词、无英文广播音**。
 
 【English motion prompt (备用)】
-Camera slowly dollies from the distant horizon toward the characters. First 1.5s: pink-orange dawn fills the sky, cotton-candy clouds, golden shimmer on calm sea, low-flying gulls, Nezha points and chats with grandpa. After 2s, time-lapse weather change — sky shifts from pink-orange to red, then grey-purple; clouds thicken and lower; sunlight dims; sea turns from gold to lead-grey; waves grow whitecaps. At 4s: sky goes dark, thunder clouds stack, a blue-white lightning fork flashes on the horizon with a low rumble, a stark white foam band slithers across the sea surface as warning. Grandpa grabs Nezha's hand and pulls him toward shore, robes whipping in sudden wind. Final freeze on the two fleeing under the storm.
+Camera dollies slowly from the distant sea horizon on the RIGHT side of the frame, panning left toward the two characters standing on the cliff on the LEFT side of the frame. First 1.5s: pink-orange dawn sky, cotton-candy clouds, golden shimmer on calm sea to the right, low-flying gulls; Nezha and grandpa stand together on the left-side cliff, facing the LEFT (inland) side of the frame, the sea is BEHIND them on the right. After 2s, time-lapse weather change — sky shifts from pink-orange to red, then grey-purple; clouds thicken and lower; sunlight dims; sea turns from gold to lead-grey; whitecaps grow on the RIGHT side of frame. At 4s: sky goes dark, thunder clouds stack above the right-side sea, a blue-white lightning fork flashes on the horizon, low rumble; a stark white foam band slithers across the sea surface; sea breeze blows from right to left, whipping grandpa's beard and Nezha's red sash toward the LEFT side of the frame. At 5s: **Grandpa grabs Nezha's hand; they TURN THEIR BACKS to the waves and run along the cliff path toward the LEFT side of the frame, away from the sea, heading inland to higher ground**. Their silhouettes move from right to left and are about to exit the left edge of the frame. Nezha glances back over his shoulder at the rolling dark clouds and whitecaps behind them, but his feet and body remain pointed LEFT (inland). Final freeze: the two fleeing toward the left/inland safe high ground, with menacing storm clouds and crashing waves behind them on the right.
 
-【风格关键词】戏曲风插画、电影感延时摄影、由暖入冷调色、天气剧变张力、戏曲打击乐渐强
+**CRITICAL DIRECTION RULES — MUST FOLLOW**:
+- Sea is always on the RIGHT side of the frame; inland/safety is on the LEFT.
+- When running, characters move FROM RIGHT TO LEFT across the frame, BACKS to the sea.
+- Do NOT have characters run toward the sea, toward the right edge, or toward the horizon.
+- Their bodies, feet, and motion trail all point LEFT (inland). Only their heads may glance back toward the sea.
+- Wind blows from sea (right) to land (left); clothing flutters LEFT, consistent with their escape direction.
+
+【风格关键词】戏曲风插画、电影感延时摄影、由暖入冷调色、天气剧变张力、戏曲打击乐渐强、人物自右向左逃离构图
 【时长建议】5-6 秒
 【分辨率】1024x1024 或 1:1
