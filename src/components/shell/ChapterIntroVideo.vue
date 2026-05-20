@@ -28,6 +28,8 @@
 
 <script setup>
 import { computed, onMounted, onBeforeUnmount, ref } from 'vue';
+import { assetUrl } from '@/utils/assetUrl';
+import { suspendForVideo, resumeFromVideo } from '@/composables/useBgm';
 
 const props = defineProps({
   src: { type: String, required: true },
@@ -39,11 +41,7 @@ const videoRef = ref(null);
 const needTap = ref(false);
 let finished = false;
 
-const resolvedSrc = computed(() => {
-  const base = import.meta.env.BASE_URL;
-  const path = props.src.replace(/^\//, '');
-  return `${base}${path}`;
-});
+const resolvedSrc = computed(() => assetUrl(props.src));
 
 async function tryPlay() {
   const v = videoRef.value;
@@ -78,10 +76,13 @@ function onTap() {
 function finish() {
   if (finished) return;
   finished = true;
+  resumeFromVideo();
   emit('done');
 }
 
 onMounted(() => {
+  // 视频开播前先挂起 BGM，避免两路音频抢声道
+  suspendForVideo();
   tryPlay();
 });
 
@@ -90,6 +91,8 @@ onBeforeUnmount(() => {
   if (v) {
     try { v.pause(); } catch {}
   }
+  // 兜底：哪怕 finish() 没被调到（路由突然切换等异常路径），也要确保 BGM 恢复
+  resumeFromVideo();
 });
 </script>
 

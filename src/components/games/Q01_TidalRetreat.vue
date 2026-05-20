@@ -95,6 +95,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useCountdown } from '@/composables/useCountdown';
+import { assetUrl } from '@/utils/assetUrl';
 
 const props = defineProps({ question: Object });
 const emit = defineEmits(['correct', 'wrong']);
@@ -119,10 +120,9 @@ let sx = 0, sy = 0;
 const SWIPE_THRESHOLD = 30;
 
 const charSrc = computed(() => {
-  const base = import.meta.env.BASE_URL;
-  if (charState.value === 'run') return `${base}images/characters/nezha_run.png`;
-  if (charState.value === 'wash') return `${base}images/characters/nezha_fall.png`;
-  return `${base}images/characters/nezha_idle.png`;
+  if (charState.value === 'run') return assetUrl('images/characters/nezha_run.png');
+  if (charState.value === 'wash') return assetUrl('images/characters/nezha_fall.png');
+  return assetUrl('images/characters/nezha_idle.png');
 });
 
 // 角色样式：拖动中跟随手指倾斜，结算后用结算样式
@@ -195,10 +195,19 @@ function computeDirection(dx, dy) {
   return absX > absY ? (dx > 0 ? 'right' : 'left') : (dy > 0 ? 'down' : 'up');
 }
 
+// SVG 轨迹的 viewBox 是 0..stageW / 0..stageH（stage 自身坐标系），
+// 必须把 viewport 坐标 (clientX/Y) 减去 stage 的左上角偏移，否则线条会
+// 渲染到 stage 之外（表现为：线总是垂直拖向页面底部）。
+function getStageOffset() {
+  const rect = stageRef.value?.getBoundingClientRect();
+  return rect ? { left: rect.left, top: rect.top } : { left: 0, top: 0 };
+}
+
 function onPointerDown(e) {
   if (!started.value || ended.value) return;
-  sx = e.clientX;
-  sy = e.clientY;
+  const off = getStageOffset();
+  sx = e.clientX - off.left;
+  sy = e.clientY - off.top;
   dragging.value = true;
   dragDirection.value = '';
   dragPos.value = { x: sx, y: sy };
@@ -207,8 +216,11 @@ function onPointerDown(e) {
 
 function onPointerMove(e) {
   if (!started.value || ended.value || !dragging.value) return;
-  dragPos.value = { x: e.clientX, y: e.clientY };
-  dragDirection.value = computeDirection(e.clientX - sx, e.clientY - sy);
+  const off = getStageOffset();
+  const x = e.clientX - off.left;
+  const y = e.clientY - off.top;
+  dragPos.value = { x, y };
+  dragDirection.value = computeDirection(x - sx, y - sy);
 }
 
 function onPointerUp(e) {
@@ -263,7 +275,7 @@ onUnmounted(() => {
 .q01-bg {
   position: absolute;
   inset: 0;
-  background-image: url('/images/scenes/wave_reef.png');
+  background-image: url('https://beach-danger-question-guangzhou.tos-cn-guangzhou.volces.com/scenes/wave_reef.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -405,7 +417,7 @@ onUnmounted(() => {
 .q01-tsunami {
   position: absolute;
   inset: 0;
-  background-image: url('/images/scenes/wave_tsunami.png');
+  background-image: url('https://beach-danger-question-guangzhou.tos-cn-guangzhou.volces.com/scenes/wave_tsunami.webp');
   background-size: cover;
   background-position: center;
   background-color: #2980b9;

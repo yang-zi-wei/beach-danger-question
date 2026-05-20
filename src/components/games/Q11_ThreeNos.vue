@@ -92,6 +92,7 @@
 <script setup>
 import { ref, computed, reactive, onMounted } from 'vue';
 import { useCountdown } from '@/composables/useCountdown';
+import { assetUrl } from '@/utils/assetUrl';
 
 const props = defineProps({ question: Object });
 const emit = defineEmits(['correct', 'wrong']);
@@ -105,14 +106,11 @@ const flashColor = ref('');
 
 const cfg = computed(() => props.question?.gameConfig || {});
 const coverDesc = computed(() => cfg.value.coverDesc || '依次盖出三个红"不"字大印');
-const base = import.meta.env.BASE_URL;
-const FALLBACK_BG = `${base}images/scenes/wave_reef.png`;
+const FALLBACK_BG = assetUrl('images/scenes/wave_reef.png');
 
 const bgSrc = ref('');
 onMounted(() => {
-  bgSrc.value = cfg.value.sceneImage
-    ? `${base}${cfg.value.sceneImage.replace(/^\//, '')}`
-    : FALLBACK_BG;
+  bgSrc.value = cfg.value.sceneImage ? assetUrl(cfg.value.sceneImage) : FALLBACK_BG;
 });
 
 function onBgError() {

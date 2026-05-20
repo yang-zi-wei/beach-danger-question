@@ -1,13 +1,16 @@
 // 13 题题库 + 章节元数据
 // 每题对应一个 src/components/games/Q*.vue 组件
 
+// 视频托管在火山引擎 TOS（广州），国内访问比 GitHub Pages 快得多
+const VIDEO_CDN = 'https://beach-danger-question-guangzhou.tos-cn-guangzhou.volces.com/video/_originals';
+
 export const chapters = [
-  { key: 'wave',     title: '海浪陷阱类', color: '#3B82F6', introVideo: 'images/video/海浪陷阱类危险闯关.mp4' },
-  { key: 'creature', title: '海洋生物类', color: '#10B981', introVideo: 'images/video/海洋生物类危险闯关.mp4' },
-  { key: 'boat',     title: '渔船活动类', color: '#F59E0B', introVideo: 'images/video/渔船活动类危险闻关.mp4' },
-  { key: 'beach',    title: '沙滩游戏类', color: '#EC4899', introVideo: 'images/video/沙滩游戏类危险闯关.mp4' },
-  { key: 'weather',  title: '极端天气类', color: '#8B5CF6', introVideo: 'images/video/极端天气类危险闯关.mp4' },
-  { key: 'final',    title: '终极忠告',   color: '#EF4444', introVideo: 'images/video/终章.mp4' },
+  { key: 'wave',     title: '海浪陷阱类', color: '#3B82F6', introVideo: `${VIDEO_CDN}/${encodeURIComponent('海浪陷阱类危险闯关.mp4')}` },
+  { key: 'creature', title: '海洋生物类', color: '#10B981', introVideo: `${VIDEO_CDN}/${encodeURIComponent('海洋生物类危险闯关.mp4')}` },
+  { key: 'boat',     title: '渔船活动类', color: '#F59E0B', introVideo: `${VIDEO_CDN}/${encodeURIComponent('渔船活动类危险闻关.mp4')}` },
+  { key: 'beach',    title: '沙滩游戏类', color: '#EC4899', introVideo: `${VIDEO_CDN}/${encodeURIComponent('沙滩游戏类危险闯关.mp4')}` },
+  { key: 'weather',  title: '极端天气类', color: '#8B5CF6', introVideo: `${VIDEO_CDN}/${encodeURIComponent('极端天气类危险闯关.mp4')}` },
+  { key: 'final',    title: '终极忠告',   color: '#EF4444', introVideo: `${VIDEO_CDN}/${encodeURIComponent('终章.mp4')}` },
 ];
 
 export const questions = [

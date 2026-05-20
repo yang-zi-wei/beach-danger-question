@@ -81,6 +81,7 @@
 <script setup>
 import { ref, reactive, computed, onMounted, onUnmounted } from 'vue';
 import { useCountdown } from '@/composables/useCountdown';
+import { assetUrl } from '@/utils/assetUrl';
 
 const props = defineProps({ question: Object });
 const emit = defineEmits(['correct', 'wrong']);
@@ -117,10 +118,7 @@ const dragging = ref(null);
 const pointer = ref({ x: 0, y: 0 });
 const pointerOnVictim = ref(false);
 
-const sceneSrc = computed(() => {
-  const base = import.meta.env.BASE_URL;
-  return `${base}images/characters/linglin_hurt.png`;
-});
+const sceneSrc = computed(() => assetUrl('images/characters/linglin_hurt.png'));
 
 // 伤口热区位置 —— 占位中心，等看图后微调
 // （传入 question.gameConfig.wound 可覆盖，例如 { top:'58%', left:'46%', size:'120px' }）

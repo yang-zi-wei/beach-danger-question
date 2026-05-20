@@ -6,3 +6,6 @@ dist
 *.log
 .vscode
 .idea
+
+# 视频优化脚本生成的本地备份（原始未压缩文件，约 22MB）
+public/images/video/_originals/

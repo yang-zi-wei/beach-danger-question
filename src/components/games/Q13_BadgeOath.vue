@@ -118,6 +118,7 @@
 <script setup>
 import { ref, computed, reactive, onMounted, onUnmounted } from 'vue';
 import { useCountdown } from '@/composables/useCountdown';
+import { assetUrl } from '@/utils/assetUrl';
 
 const props = defineProps({ question: Object });
 const emit = defineEmits(['correct', 'wrong']);
@@ -143,19 +144,15 @@ const slots = computed(() => cfg.value.slots || [
 const badges = computed(() => cfg.value.badges || []);
 const finalTitle = computed(() => cfg.value.finalTitle || '安全小卫士');
 
-const base = import.meta.env.BASE_URL;
-const FALLBACK_BG = `${base}images/scenes/wave_reef.png`;
+const FALLBACK_BG = assetUrl('images/scenes/wave_reef.png');
 
 const medalSrc = ref('');
 onMounted(() => {
-  medalSrc.value = cfg.value.medalImage
-    ? `${base}${cfg.value.medalImage.replace(/^\//, '')}`
-    : FALLBACK_BG;
+  medalSrc.value = cfg.value.medalImage ? assetUrl(cfg.value.medalImage) : FALLBACK_BG;
 });
 
 function resolveSrc(p) {
-  if (!p) return '';
-  return `${base}${p.replace(/^\//, '')}`;
+  return assetUrl(p);
 }
 function onMedalError() {
   if (medalSrc.value !== FALLBACK_BG) medalSrc.value = FALLBACK_BG;

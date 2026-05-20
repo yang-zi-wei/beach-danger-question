@@ -113,6 +113,7 @@
 <script setup>
 import { ref, computed, reactive, onMounted, onUnmounted } from 'vue';
 import { useCountdown } from '@/composables/useCountdown';
+import { assetUrl } from '@/utils/assetUrl';
 
 const props = defineProps({ question: Object });
 const emit = defineEmits(['correct', 'wrong']);
@@ -130,19 +131,15 @@ const coverDesc = computed(() => cfg.value.coverDesc || '岸上施救三步法')
 const items = computed(() => cfg.value.items || []);
 const victim = computed(() => cfg.value.victim || { top: '50%', left: '70%' });
 
-const base = import.meta.env.BASE_URL;
-const FALLBACK_BG = `${base}images/scenes/wave_reef.png`;
+const FALLBACK_BG = assetUrl('images/scenes/wave_reef.png');
 
 const bgSrc = ref('');
 onMounted(() => {
-  bgSrc.value = cfg.value.scene
-    ? `${base}${cfg.value.scene.replace(/^\//, '')}`
-    : FALLBACK_BG;
+  bgSrc.value = cfg.value.scene ? assetUrl(cfg.value.scene) : FALLBACK_BG;
 });
 
 function resolveSrc(p) {
-  if (!p) return '';
-  return `${base}${p.replace(/^\//, '')}`;
+  return assetUrl(p);
 }
 function onBgError() {
   if (bgSrc.value !== FALLBACK_BG) bgSrc.value = FALLBACK_BG;

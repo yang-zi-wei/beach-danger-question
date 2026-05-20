@@ -9,7 +9,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  base: './',
+  base: '/beach-danger-question/',
   server: {
     host: true,
     port: 5173,

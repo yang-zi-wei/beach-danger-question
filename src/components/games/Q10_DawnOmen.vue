@@ -43,7 +43,7 @@
       <img
         v-if="phase === 4 && !isCorrect"
         class="q10-confused"
-        :src="`${base}images/characters/nezha_idle.png`"
+        :src="assetUrl('images/characters/nezha_idle.png')"
         alt="哪吒"
       />
     </div>
@@ -90,6 +90,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useCountdown } from '@/composables/useCountdown';
+import { assetUrl } from '@/utils/assetUrl';
 
 const props = defineProps({ question: Object });
 const emit = defineEmits(['correct', 'wrong']);
@@ -103,14 +104,11 @@ const flashColor = ref('');
 
 const cfg = computed(() => props.question?.gameConfig || {});
 const coverDesc = computed(() => cfg.value.coverDesc || '看朝霞猜后果');
-const base = import.meta.env.BASE_URL;
-const FALLBACK_IMG = `${base}images/scenes/wave_reef.png`;
+const FALLBACK_IMG = assetUrl('images/scenes/wave_reef.png');
 
 const dawnSrc = ref('');
 onMounted(() => {
-  dawnSrc.value = cfg.value.dawnImage
-    ? `${base}${cfg.value.dawnImage.replace(/^\//, '')}`
-    : FALLBACK_IMG;
+  dawnSrc.value = cfg.value.dawnImage ? assetUrl(cfg.value.dawnImage) : FALLBACK_IMG;
 });
 
 function onImgError() {

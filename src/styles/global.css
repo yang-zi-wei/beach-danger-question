@@ -39,3 +39,10 @@ img {
   background: linear-gradient(180deg, #b3d8f5 0%, #f5e6d3 100%);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
+
+/* 已取消限时答题机制，统一隐藏所有游戏内的倒计时 UI
+   （Q01-Q13 各自的 .q01-countdown / .q02-countdown ... 以及通用组件
+    的 .ih-countdown / .hs-countdown） */
+[class*="-countdown"] {
+  display: none !important;
+}

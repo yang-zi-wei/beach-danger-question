@@ -73,6 +73,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { useCountdown } from '@/composables/useCountdown';
+import { assetUrl } from '@/utils/assetUrl';
 
 const props = defineProps({ question: Object });
 const emit = defineEmits(['correct', 'wrong']);
@@ -92,13 +93,11 @@ const chapterLabel = computed(() => {
   return n ? `第 ${n} 关` : '挑战题';
 });
 
-const base = import.meta.env.BASE_URL;
-const FALLBACK_SCENE = `${base}images/scenes/wave_reef.png`;
+const FALLBACK_SCENE = assetUrl('images/scenes/wave_reef.png');
 const resolvedScene = ref(FALLBACK_SCENE);
 
 onMounted(() => {
-  const path = cfg.value.scene || '';
-  resolvedScene.value = path ? `${base}${path.replace(/^\//, '')}` : FALLBACK_SCENE;
+  resolvedScene.value = cfg.value.scene ? assetUrl(cfg.value.scene) : FALLBACK_SCENE;
 });
 
 function onSceneError() {
@@ -106,10 +105,7 @@ function onSceneError() {
 }
 
 function resolvedIconSrc(src) {
-  if (!src) return '';
-  return src.startsWith('http') || src.startsWith('data:')
-    ? src
-    : `${base}${src.replace(/^\//, '')}`;
+  return assetUrl(src);
 }
 
 const icons = computed(() => Array.isArray(cfg.value.icons) ? cfg.value.icons : []);

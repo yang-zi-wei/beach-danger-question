@@ -112,7 +112,8 @@ watch(() => props.status, (val) => {
 
 .knowledge-card {
   position: absolute;
-  bottom: 120px;
+  /* 卡片要在按钮上方，按钮自带 safe-area，所以这里也跟着加 */
+  bottom: calc(120px + env(safe-area-inset-bottom, 0px));
   left: 20px;
   right: 20px;
   background: #f5e6d3;
@@ -145,7 +146,10 @@ watch(() => props.status, (val) => {
 
 .action-row {
   position: absolute;
-  bottom: 40px;
+  /* env(safe-area-inset-bottom) 让按钮在带 Home Indicator / 浏览器底部导航的设备上不被裁切 */
+  bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 12px;
   animation: card-rise 300ms ease-out;
@@ -155,6 +159,9 @@ watch(() => props.status, (val) => {
 .next-btn {
   /* 让两个按钮并排展示在同一行 */
   position: static;
+  /* 防止 "再来一次" / "下一题 →" 因父容器被挤压而换行成两行（一旦换行按钮变高就更容易被裁） */
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .opera-btn--ghost {

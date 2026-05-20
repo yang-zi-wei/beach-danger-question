@@ -92,6 +92,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useCountdown } from '@/composables/useCountdown';
+import { assetUrl } from '@/utils/assetUrl';
 
 const props = defineProps({ question: Object });
 const emit = defineEmits(['correct', 'wrong']);
@@ -107,18 +108,17 @@ const dragging = ref(false);
 const pointer = ref({ x: 0, y: 0 });
 
 const cfg = computed(() => props.question?.gameConfig || {});
-const base = import.meta.env.BASE_URL;
 
 const bgSrc = ref('');
 const ringSrc = ref('');
 const successSrc = ref('');
 const showSuccess = ref(false);
-const FALLBACK_BG = `${base}images/scenes/wave_reef.png`;
+const FALLBACK_BG = assetUrl('images/scenes/wave_reef.png');
 
 onMounted(() => {
-  bgSrc.value = cfg.value.background ? `${base}${cfg.value.background.replace(/^\//, '')}` : FALLBACK_BG;
-  ringSrc.value = cfg.value.ringIcon ? `${base}${cfg.value.ringIcon.replace(/^\//, '')}` : '';
-  successSrc.value = cfg.value.successImage ? `${base}${cfg.value.successImage.replace(/^\//, '')}` : '';
+  bgSrc.value = cfg.value.background ? assetUrl(cfg.value.background) : FALLBACK_BG;
+  ringSrc.value = assetUrl(cfg.value.ringIcon);
+  successSrc.value = assetUrl(cfg.value.successImage);
   const el = stageRef.value;
   el.addEventListener('pointerdown', onPointerDown);
   el.addEventListener('pointermove', onPointerMove);

@@ -67,6 +67,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { useCountdown } from '@/composables/useCountdown';
+import { assetUrl } from '@/utils/assetUrl';
 
 const props = defineProps({ question: Object });
 const emit = defineEmits(['correct', 'wrong']);
@@ -89,13 +90,10 @@ const chapterLabel = computed(() => {
 });
 
 const resolvedImg = ref('');
-const FALLBACK_IMG = `${import.meta.env.BASE_URL}images/scenes/wave_reef.png`;
+const FALLBACK_IMG = assetUrl('images/scenes/wave_reef.png');
 
 onMounted(() => {
-  const path = cfg.value.image || '';
-  resolvedImg.value = path
-    ? `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
-    : FALLBACK_IMG;
+  resolvedImg.value = cfg.value.image ? assetUrl(cfg.value.image) : FALLBACK_IMG;
 });
 
 function onImgError() {
